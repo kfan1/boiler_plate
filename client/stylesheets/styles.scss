@@ -1,0 +1,63 @@
+$primary: rgb(46, 46, 46);
+$secondary: rgb(59, 59, 59);
+$tertiary: rgb(173, 173, 173);
+$superLightGrey: rgb(241, 241, 241);
+$white: rgb(255, 255, 255);
+
+body {
+  background-color: $superLightGrey;
+}
+
+/* NavBar Styles */
+.navbar {
+  padding: 0.4% 3%;
+  background-image: linear-gradient(rgb(0, 51, 146), rgb(5, 69, 187));
+  font-weight: 600;
+
+  #active {
+    color: $white;
+  }
+}
+
+.homeclick {
+  width: 50px;
+  transition: 250ms;
+}
+
+.homeclick:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.nav-link {
+  margin-left: 30px;
+  color: $tertiary;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar-brand {
+    margin-left: 48%;
+    margin-right: auto;
+  }
+
+  .nav-link-list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.nav-link:hover {
+  color: $white;
+}
+
+.nav-link:focus {
+  color: $white;
+}
+
+.navbar-toggler {
+  color: $superLightGrey;
+  border-color: $superLightGrey;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(241, 241, 241)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}

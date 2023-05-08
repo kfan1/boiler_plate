@@ -6,6 +6,7 @@ import Home from './pages/mainPage.jsx';
 import SignUp from './pages/signUpPage.jsx';
 import LogIn from './pages/logInPage.jsx';
 import About from './pages/aboutPage.jsx';
+import './stylesheets/styles.scss'
 
 function App() {
   return (
