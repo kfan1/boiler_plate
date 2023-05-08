@@ -9,7 +9,6 @@ export default function header() {
 
   useEffect(() => {
     document.querySelectorAll('.nav-link').forEach((element) => {
-      console.log(element.href);
       if (element.href === window.location.href) element.id = 'active';
     });
   });
@@ -25,7 +24,7 @@ export default function header() {
       <nav className='navbar navbar-expand-lg' data-bs-theme='light'>
         <div className='container-fluid'>
           <a className='navbar-brand' href='/'>
-            <img className='homeclick' src='assets/images/data-science.png' />
+            <img className='homeclick' src='/assets/images/data-science.png' />
           </a>
           <CollapsedButton />
 
