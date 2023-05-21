@@ -1,2 +1,2 @@
 # Boiler Plate
-Boiler plate for React/Redux App with Express and Bootstrap and Bcrypt
+MERN (MongoDB, ExpressJS, React, NodeJS) Fullstack boilerplate with Bootstrap, Bcrypt, Sass, and Redux.
