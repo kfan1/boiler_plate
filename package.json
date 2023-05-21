@@ -20,6 +20,7 @@
   "homepage": "https://github.com/kfan1/boiler_plate",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "bcryptjs": "^2.4.3",
     "concurrently": "^8.0.1",
     "cookie-parser": "^1.4.6",
     "cross-env": "^7.0.3",
