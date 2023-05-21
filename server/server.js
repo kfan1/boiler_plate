@@ -1,23 +1,44 @@
 const path = require('path');
 const express = require('express');
-
 const app = express();
+const mongoose = require('mongoose');
+const cookieParser = require('cookie-parser');
+const myRouter = require('./routes/myRoute');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+/* UNCOMMENT THE FOLLOWING AFTER YOU INPUT A URI */
 
-app.use(express.json());
+// const mongoURI = '';
+// mongoose.connect(mongoURI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   dbName: 'myDatabase',
+// });
+
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cookieParser());
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, '../dist')));
 }
 
-app.use(express.static(path.resolve(__dirname, '../client')));
+app.use('/assets', express.static(path.resolve(__dirname, '../src/assets')));
 
-app.use('/server', (req, res) => {
-  res.status(200).json({ yes: 'HELLOOOOO' });
+app.use('/server', myRouter);
+
+// 404 error handler
+app.use((req, res) => {
+  res.status(404).send("This is not the page you're looking for");
 });
 
+// Global error handler
+app.use((err, req, res, next) => {
+  console.log(err);
+  res.status(500).send({ error: err });
+});
+
+// Starting server
 app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}...`);
 });

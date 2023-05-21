@@ -1,7 +1,7 @@
 {
-  "name": "messing-around",
+  "name": "my-app",
   "version": "1.0.0",
-  "description": "Just me messing around",
+  "description": "my-app",
   "main": "index.js",
   "scripts": {
     "server": "NODE_ENV=production nodemon ./server/server.js",
@@ -12,18 +12,20 @@
     "type": "git",
     "url": "git+https://github.com/kfan1/MessingAround.git"
   },
-  "author": "kevinlifan",
+  "author": "Kevin Fan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kfan1/MessingAround/issues"
+    "url": "https://github.com/kfan1/boiler_plate/issues"
   },
-  "homepage": "https://github.com/kfan1/MessingAround#readme",
+  "homepage": "https://github.com/kfan1/boiler_plate",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "concurrently": "^8.0.1",
+    "cookie-parser": "^1.4.6",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
     "express": "^4.18.2",
+    "mongoose": "^7.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
