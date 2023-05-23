@@ -7,4 +7,4 @@ const testSchema = new Schema({
   myNumber: Number,
 });
 
-module.exports = mongoose.model('test', TestSchema);
+module.exports = mongoose.model('test', testSchema);
