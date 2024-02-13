@@ -3,7 +3,7 @@ import { Nav, NavDropdown, NavLink } from 'react-bootstrap';
 
 export default function LeftSideNavBar() {
   return (
-    <Nav className='me-auto' navbarSupportedContent>
+    <Nav className='me-auto'>
       <Nav.Link href=''>Home</Nav.Link>
       <Nav.Link href=''>Link</Nav.Link>
       <NavDropdown title='Dropdown'>

@@ -11,8 +11,8 @@ export default function header() {
     <Navbar expand='lg'>
       <Container fluid>
         <Navbar.Brand href='/'>{myState}</Navbar.Brand>
-        <Navbar.Toggle aria-controls='navbarSupportedContent' />
-        <Navbar.Collapse id='navbarSupportedContent'>
+        <Navbar.Toggle aria-controls='basic-navbar-nav' />
+        <Navbar.Collapse id='basic-navbar-nav'>
           <LeftSideNavBar />
           <RightSideNavBar />
         </Navbar.Collapse>

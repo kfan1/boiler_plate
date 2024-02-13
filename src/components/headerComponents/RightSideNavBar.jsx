@@ -6,6 +6,7 @@ import { Button, Form } from 'react-bootstrap';
 export default function RightSideNavBar() {
   const [newName, setNewName] = useState();
   const dispatch = useDispatch();
+  const formInput = useRef('');
 
   return (
     <Form className='d-flex' role='search'>
@@ -13,7 +14,8 @@ export default function RightSideNavBar() {
         className='me-2'
         type='search'
         placeholder='change the name'
-        value={newName}
+        // value={newName}
+        ref={formInput}
         onChange={(e) => setNewName(e.target.value)}
       />
       <Button
@@ -22,7 +24,8 @@ export default function RightSideNavBar() {
         onClick={(e) => {
           e.preventDefault();
           dispatch(setMyState(newName));
-          setNewName('');
+          formInput.current.value = '';
+          // setNewName('');
         }}>
         Change
       </Button>
