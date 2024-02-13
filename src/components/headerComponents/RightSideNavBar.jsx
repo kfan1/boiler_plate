@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setMyState } from '../../store/slices/appSlice';
 import { Button, Form } from 'react-bootstrap';
@@ -13,6 +13,7 @@ export default function RightSideNavBar() {
         className='me-2'
         type='search'
         placeholder='change the name'
+        value={newName}
         onChange={(e) => setNewName(e.target.value)}
       />
       <Button
@@ -21,6 +22,7 @@ export default function RightSideNavBar() {
         onClick={(e) => {
           e.preventDefault();
           dispatch(setMyState(newName));
+          setNewName('');
         }}>
         Change
       </Button>
